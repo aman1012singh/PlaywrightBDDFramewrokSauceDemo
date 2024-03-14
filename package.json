@@ -1,0 +1,18 @@
+{
+  "name": "6bddframeworksaucedemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js  test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.26",
+    "ts-node": "^10.9.2"
+  }
+}
