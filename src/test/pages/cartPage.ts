@@ -18,8 +18,7 @@ export class CartPage{
         this.invetoryItemName = page.locator('[class="inventory_item_name"]');
         this.invetoryItemDesc= page.locator('[class="inventory_item_desc"]');
         this.inventoryItemPrice= page.locator('[class="inventory_item_price"]');
-        this.checkoutButton= page.locator('[class="btn btn_action btn_medium checkout_button "]');
-        
+        this.checkoutButton= page.locator('[class="btn btn_action btn_medium checkout_button "]');  
     }
     public async verifyRedirectedToCartPage(){ 
         await this.titleYourCart.waitFor();

@@ -19,14 +19,10 @@ export class CheckoutOverviewPage{
         this.invetoryItemName = page.locator('[class="inventory_item_name"]').first();
         this.invetoryItemDesc= page.locator('[class="inventory_item_desc"]').first();
         this.inventoryItemPrice= page.locator('[class="inventory_item_price"]').first();
-        
         this.paymentInfo = page.locator('[class="summary_value_label"]').first();
         this.shippingInfo = page.locator('[class="summary_value_label"]').nth(1);        
         this.priceTotalInfo = page.locator('[class="summary_subtotal_label"]');        
         this.total = page.locator('[class="summary_info_label summary_total_label"]'); 
-
-
-
         this.finishButton = page.locator('[class="btn btn_action btn_medium cart_button"]');
         this.titleThankYouPage = page.locator('[class="complete-header"]');
         this.backButton= page.locator('[class="btn btn_primary btn_small"]');
@@ -54,15 +50,12 @@ export class CheckoutOverviewPage{
         expect(total).toContain("32.39");
     }
     public async verifyOrderDetails(){
-        console.log('ORDER DETAILS AND PRICE PAYMENT OPTIONS :::::::::::::::::::::');
         await this.invetoryItemName.waitFor();
         await this.invetoryItemDesc.waitFor();
         await this.inventoryItemPrice.waitFor();
         await expect(this.invetoryItemName).toBeVisible();
         await expect(this.invetoryItemDesc).toBeVisible();
         await expect(this.inventoryItemPrice).toBeVisible(); 
-
-
     }
     public async clickFinishButton(){
         await this.finishButton.waitFor();
